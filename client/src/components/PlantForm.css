@@ -22,12 +22,12 @@ body{
     background: white;
     padding: 2rem;
     border-radius: 1rem;
-    border: 1px solid #e5e7eb; /* Light border */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Subtle shadow */
+    border: 1px solid #e5e7eb; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); 
     
   }
   .label-input {
-    margin-bottom: 1.2rem; /* Adjust spacing as needed */
+    margin-bottom: 1.2rem; 
     
   }
   .heading{
@@ -39,7 +39,7 @@ body{
   }
   .green-but {
     display: flex;
-    gap: 1rem; /* space between buttons */
+    gap: 1rem; 
     justify-content: center;
   }
   
@@ -49,7 +49,7 @@ body{
     border-radius: 10px;
     font-weight: bold;
     font-size: 16px;
-    height: 50px; /* equal height */
+    height: 50px; 
   }
   
  

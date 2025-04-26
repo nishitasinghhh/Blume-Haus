@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import axios from "axios";
 import { useState } from "react";
-import "/Users/nishitasingh/Desktop/plant/client/src/components/PantCard.css"; // Import the CSS file
+import "./PantCard.css"; 
 
 function PlantCard({ plant, onDelete, onUpdate }) {
   const [isEditing, setIsEditing] = useState(false);
@@ -9,7 +9,7 @@ function PlantCard({ plant, onDelete, onUpdate }) {
 
   const handleDelete = async () => {
     try {
-      const response = await axios.delete(`http://localhost:3001/api/plants/${plant._id}`, { withCredentials: true });
+      const response = await axios.delete(`${import.meta.env.VITE_APP_API_URL}/api/plants/${plant._id}`, { withCredentials: true });
       if (response.status === 200) onDelete(plant._id);
     } catch (error) {
       console.error("Error deleting plant:", error);
@@ -18,7 +18,7 @@ function PlantCard({ plant, onDelete, onUpdate }) {
 
   const handleUpdate = async () => {
     try {
-      const response = await axios.put(`http://localhost:3001/api/plants/${plant._id}`, updatedPlant, { withCredentials: true });
+      const response = await axios.put(`${import.meta.env.VITE_APP_API_URL}/api/plants/${plant._id}`, updatedPlant, { withCredentials: true });
       if (response.status === 200) {
         const updated = { ...response.data, healthStatus: getHealthStatus(response.data) };
         onUpdate(updated);

@@ -7,7 +7,7 @@ const Navbar = () => {
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    axios.get('http://localhost:3001/logout', { withCredentials: true })
+    axios.get(`${import.meta.env.VITE_APP_API_URL}/logout`, { withCredentials: true })
       .then(res => {
         if (res.data.status === "success") {
           navigate('/login');

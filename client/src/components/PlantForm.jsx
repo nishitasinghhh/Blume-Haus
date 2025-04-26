@@ -21,14 +21,14 @@ const PlantForm = () => {
     plantData.append("waterFrequency", parseInt(waterFrequency));
     plantData.append("lightRequirement", lightRequirement);
     
-    // Only append the raw image file (backend will handle upload)
+   
     if (image) {
       plantData.append("image", image); 
     }
 
     try {
-      // Send all data (including raw image) to backend
-      await axios.post("http://localhost:3001/api/plants", plantData, {
+    
+      await axios.post(`${import.meta.env.VITE_APP_API_URL}/api/plants`, plantData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
@@ -38,7 +38,7 @@ const PlantForm = () => {
       navigate("/home");
       alert("Plant added successfully!");
 
-      // Reset form
+      
       setName("");
       setLastWatered("");
       setWaterFrequency("");

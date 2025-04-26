@@ -124,7 +124,7 @@ const styles = `
   }
 `;
 
-// Add styles to the document
+
 const styleElement = document.createElement('style');
 styleElement.innerHTML = styles;
 document.head.appendChild(styleElement);
