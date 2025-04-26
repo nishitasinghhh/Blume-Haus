@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&display=swap');
+ 
+body{
+    font-family: "Cormorant", serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 17px;
+}
+.form-container
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color:
+    #c2f1cf;
+}
+.form-box {
+    width: 100%;
+    max-width: 500px;
+    background: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    border: 1px solid #e5e7eb; /* Light border */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Subtle shadow */
+    
+  }
+  .label-input {
+    margin-bottom: 1.2rem; /* Adjust spacing as needed */
+    
+  }
+  .heading{
+    text-align: center;
+  }
+  input{
+    width: 100%;
+    border-radius: 20px;
+  }
+  .green-but {
+    display: flex;
+    gap: 1rem; /* space between buttons */
+    justify-content: center;
+  }
+  
+  .green-but button {
+    flex: 1;
+    padding: 0.75rem 1.5rem;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 16px;
+    height: 50px; /* equal height */
+  }
+  
+ 
+  .cancel{
+    margin-right: 70px;
+    color: #ffffff;
+  background-color: #66BB6A;
+  padding: 15px;
+  cursor: pointer;
+  border: none !important;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+  }
+  .add-plant{
+    width: 300px;
+    color: #ffffff;
+    background-color: #66BB6A;
+    padding: 15px;
+    cursor: pointer;
+    border: none !important;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+  }
+  .cancel:hover{
+    background-color: #43A047;
+    color: #fff;
+  }
+  .add-plant:hover{
+    background-color: #43A047;
+    color: #fff;
+  }
+  

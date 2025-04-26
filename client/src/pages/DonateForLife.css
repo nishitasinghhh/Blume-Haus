@@ -1,0 +1,150 @@
+/* Main container */
+.donation-container {
+    max-width: 28rem;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background-color: #f1fcf4;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  }
+  
+  /* Header section */
+  .header-section {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .header-section h1 {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: #2f855a;
+    margin-bottom: 1rem;
+  }
+  
+  .header-text {
+    color: #4b5563;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Stats section */
+  .stats-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+  }
+  
+  .stat-item {
+    text-align: center;
+  }
+  
+  .stat-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+  }
+  
+  .stat-value {
+    color: #4b5563;
+  }
+  
+  /* Divider */
+  .divider {
+    border-top: 1px solid #d1d5db;
+    margin: 1.5rem 0;
+  }
+  
+  /* Amount section */
+  .amount-section {
+    margin-bottom: 2rem;
+  }
+  
+  .amount-section h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #2f855a;
+    margin-bottom: 1rem;
+  }
+  
+  .amount-options {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .amount-option {
+    padding: 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  .amount-option:hover {
+    background-color: #f9fafb;
+  }
+  
+  .amount-option.selected {
+    background-color: #2f855a;
+    border-color: #2f855a;
+    color: white;
+  }
+  
+  .amount {
+    font-weight: 700;
+  }
+  
+  .custom-amount {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    background-color: white;
+  }
+  
+  .custom-amount input {
+    margin-right: 0.5rem;
+    cursor: pointer;
+  }
+  
+  .custom-amount label {
+    color: #4b5563;
+    cursor: not-allowed;
+  }
+  
+  /* Payment section */
+  .payment-section {
+    text-align: center;
+  }
+  
+  .donate-button {
+    padding: 0.75rem 1.5rem;
+    background-color: #66BB6A;
+    color: white;
+    border-radius: 0.5rem;
+    font-weight: 700;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .donate-button:hover {
+    background-color: #2f855a;
+  }
+  
+  .secure-text {
+    color: #6b7280;
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+  }
+  
+  .payment-provider {
+    margin-top: 0.5rem;
+  }
+  
+  .payment-provider span {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #374151;
+  }

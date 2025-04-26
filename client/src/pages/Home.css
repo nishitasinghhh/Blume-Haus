@@ -1,0 +1,134 @@
+.home-container {
+  padding: 2rem;
+  background-color: #f1fcf4;
+}
+
+.home-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.875rem 1.5rem;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e0e0e0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.home-navbar__title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2f855a;
+}
+
+.home-navbar__buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.home-navbar__button {
+  border-radius: 50px;
+  color: #ffffff;
+  background-color: #66BB6A;
+  padding: 0.9375rem;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease;
+  min-width: 100px;
+}
+
+.home-navbar__button:hover {
+  background-color: #43A047;
+}
+
+.home-dashboard {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.home-dashboard__card {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.home-dashboard__card:hover {
+  transform: translateY(-5px);
+}
+
+.home-dashboard__count {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #2f855a;
+}
+
+.home-plants-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 1rem;
+  background-color: #f1fcf4;
+  border-radius: 0.75rem;
+  margin: 1.25rem 0;
+}
+
+.home-plants-header__title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #374151;
+}
+
+.home-plants-header__button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #66BB6A;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 1.25rem;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.home-plants-header__button:hover {
+  background-color: #43A047;
+}
+
+.home-plants-header__button-icon {
+  font-size: 1.25rem;
+}
+
+.home-plants-display {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  padding: 1.5rem;
+  box-sizing: border-box;
+  justify-items: center;
+}
+
+.home-plants-display__empty {
+  color: #6b7280;
+  grid-column: 1 / -1;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .home-dashboard {
+    grid-template-columns: 1fr;
+  }
+  
+  .home-plants-header {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+}

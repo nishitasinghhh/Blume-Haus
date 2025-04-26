@@ -1,0 +1,86 @@
+/* WaterReminderSection.css */
+.reminder-section {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .reminder-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #2d3748;
+    margin-bottom: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .reminder-title::before {
+    content: "🌱";
+    font-size: 1.1rem;
+  }
+  
+  .no-reminders {
+    color: #718096;
+    font-size: 0.9rem;
+    text-align: center;
+    padding: 12px 0;
+  }
+  
+  .reminder-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .reminder-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  
+  .reminder-item:last-child {
+    border-bottom: none;
+  }
+  
+  .reminder-text {
+    flex-grow: 1;
+  }
+  
+  .reminder-action {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #2d3748;
+    margin: 0 0 4px 0;
+  }
+  
+  .reminder-due {
+    font-size: 0.875rem;
+    color: #718096;
+    margin: 0;
+  }
+  
+  .mark-done-button {
+    background: none;
+    border: 1px solid #48bb78;
+    color: #48bb78;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    white-space: nowrap;
+    margin-left: 12px;
+  }
+  
+  .mark-done-button:hover {
+    background-color: #48bb78;
+    color: white;
+  }
