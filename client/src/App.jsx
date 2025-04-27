@@ -14,10 +14,11 @@ import 'react-toastify/dist/ReactToastify.css';
 import DonateForLife from './pages/DonateForLife'
 import Success from './pages/Succes'
 import Failure from './pages/Failure'
+import axios from 'axios'
 
 
 function App() {
-
+axios.defaults.withCredentials=true
 
   return (
     <BrowserRouter>

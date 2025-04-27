@@ -1,7 +1,7 @@
 const express=require('express');
 const mongoose=require('mongoose');
 const cors=require('cors');
-const bcrypt=require('bcrypt')
+const bcrypt = require('bcryptjs');
 const EmployeeModel=require('./models/user')
 const jwt=require('jsonwebtoken')
 const cookieParser = require('cookie-parser')
@@ -18,7 +18,7 @@ require('dotenv').config();
 
 app.use(express.json());
 app.use(cors({
-    origin: ["http://localhost:5173"],
+    origin: [process.env.FRONTEND_URL],
     methods:["GET","POST","PUT","DELETE"],
     credentials: true   
 }));
@@ -36,7 +36,7 @@ app.post('/login', (req,res)=>{
                     
                 if(response)
                     {
-                        const token= jwt.sign({email: user.email}, "jwt-secret-key", {expiresIn: "1d"})
+                        const token= jwt.sign({email: user.email},process.env.JWT_SECRET_KEY, {expiresIn: "1d"})
                         res.cookie("token" , token);    
                         res.json("success")
                     }
@@ -100,10 +100,10 @@ const MERCHANT_ID=process.env.MERCHANT_ID
 const MERCHANT_BASE_URL=process.env.MERCHANT_BASE_URL
 const MERCHANT_STATUS_URL=process.env.MERCHANT_STATUS_URL
 
-const redirectUrl="http://localhost:3001/status"
+const redirectUrl=`${process.env.REDIRECT_URL}/status`
 
-const successUrl="http://localhost:5173/payment-success"
-const failureUrl="http://localhost:5173/payment-failure"
+const successUrl=`${process.env.FRONTEND_URL}/payment-success`
+const failureUrl=`${process.env.FRONTEND_URL}/payment-failure`
 
 
 app.post('/create-order', async (req, res) => {
