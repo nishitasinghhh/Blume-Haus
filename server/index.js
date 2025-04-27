@@ -23,6 +23,9 @@ app.use(cors({
     credentials: true   
 }));
 app.use(cookieParser())
+app.get('/', (req, res) => {
+  res.send('Backend Server is Running!');
+});
 
 
 app.post('/login', (req,res)=>{
