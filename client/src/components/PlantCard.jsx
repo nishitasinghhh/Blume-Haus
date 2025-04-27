@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import axios from "axios";
 import { useState } from "react";
 import "./PantCard.css"; 
-
+import React from 'react'; 
 function PlantCard({ plant, onDelete, onUpdate }) {
   const [isEditing, setIsEditing] = useState(false);
   const [updatedPlant, setUpdatedPlant] = useState({ ...plant });
