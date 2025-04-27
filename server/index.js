@@ -17,11 +17,16 @@ require('dotenv').config();
 
 
 app.use(express.json());
-app.use(cors({
-    origin: [process.env.FRONTEND_URL],
-    methods:["GET","POST","PUT","DELETE"],
-    credentials: true   
-}));
+const corsOptions = {
+  origin: [process.env.FRONTEND_URL],
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  credentials: true, // Allow cookies
+  allowedHeaders: ["Content-Type", "Authorization"],
+};
+app.use(cookieParser())
+app.use(cors(corsOptions));
+app.options('*', cors(corsOptions));
+
 app.use(cookieParser())
 app.get('/', (req, res) => {
   res.send('Backend Server is Running!');
