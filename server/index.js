@@ -11,7 +11,7 @@ const app=express()
 const authRouter = require("./routes/auth");
 const crypto = require('crypto');
 const { v4: uuidv4 } = require('uuid');
-const axios = require('axios'); // if using CommonJS
+const axios = require('axios'); 
 const cloudinary = require("cloudinary").v2;
 require('dotenv').config();
 

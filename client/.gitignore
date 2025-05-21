@@ -1,6 +1,7 @@
-
+.env
 backend/.env
 frontend/.env
+*.env.local
 # Logs
 logs
 *.log

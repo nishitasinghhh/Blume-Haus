@@ -79,7 +79,7 @@ const Home = () => {
   className="home-navbar__button home-navbar__button--donate"
   onClick={() => navigate('/donate')}
 >
-donate
+Donate
 </button>
         </div>
       </div>
