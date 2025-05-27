@@ -15,9 +15,9 @@ const axios = require('axios');
 const cloudinary = require("cloudinary").v2;
 require('dotenv').config();
 const allowedOrigin = [
-  'blume-haus-t3tz.vercel.app',
-  'blume-haus-t3tz-git-main-nishita-s-projects.vercel.app',
-    'blume-haus-t3tz-isg2a51zj-nishita-s-projects.vercel.app',
+  'https://blume-haus-t3tz.vercel.app',
+  'https://blume-haus-t3tz-git-main-nishita-s-projects.vercel.app/',
+    'https://blume-haus-t3tz-4qm61jf3u-nishita-s-projects.vercel.app/',
   'http://localhost:3000'
 ];
 
