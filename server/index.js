@@ -18,7 +18,7 @@ const allowedOrigin = [
   'blume-haus-t3tz.vercel.app',
   'blume-haus-t3tz-git-main-nishita-s-projects.vercel.app',
     'blume-haus-t3tz-isg2a51zj-nishita-s-projects.vercel.app',
-  'http://localhost:3000'
+  'http://localhost:5173'
 ];
 
 app.use(express.json());
