@@ -20,7 +20,7 @@ const allowedOrigin = [
     'https://blume-haus-t3tz-4qm61jf3u-nishita-s-projects.vercel.app',
   'http://localhost:3000'
 ];
-
+app.use(cors(corsOptions));
 app.use(express.json());
 app.use(cookieParser());
 
@@ -30,7 +30,7 @@ const corsOptions = {
   credentials: true,
   allowedHeaders: ["Content-Type","Authorization"],
 };
-app.use(cors(corsOptions));
+
 
 app.get('/', (req, res) => {
   res.send('API is running...');
