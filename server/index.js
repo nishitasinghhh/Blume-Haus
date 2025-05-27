@@ -14,18 +14,24 @@ const { v4: uuidv4 } = require('uuid');
 const axios = require('axios'); 
 const cloudinary = require("cloudinary").v2;
 require('dotenv').config();
-
+const allowedOrigin = [
+  'blume-haus-t3tz.vercel.app',
+  'blume-haus-t3tz-git-main-nishita-s-projects.vercel.app',
+    'blume-haus-t3tz-isg2a51zj-nishita-s-projects.vercel.app',
+  'http://localhost:3000'
+];
 
 app.use(express.json());
-app.use(cors({
-    origin: [process.env.FRONTEND_URL],
-    methods:["GET","POST","PUT","DELETE"],
-    credentials: true   
-}));
-app.use(cookieParser())
-app.get('/', (req, res) => {
-  res.send('Backend Server is Running!');
-});
+app.use(cookieParser());
+
+const corsOptions = {
+  origin: allowedOrigin,
+  methods: ["GET","POST","PUT","DELETE","OPTIONS"],
+  credentials: true,
+  allowedHeaders: ["Content-Type","Authorization"],
+};
+app.use(cors(corsOptions));
+
 
 
 app.post('/login', (req,res)=>{
