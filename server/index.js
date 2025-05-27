@@ -46,7 +46,12 @@ app.post('/login', (req,res)=>{
                 if(response)
                     {
                         const token= jwt.sign({email: user.email},process.env.JWT_SECRET_KEY, {expiresIn: "1d"})
-                        res.cookie("token" , token);    
+                        res.cookie("token", token, {
+  httpOnly: true,
+  secure: true, // set to true if using HTTPS
+  sameSite: "None", // required for cross-site requests like Vercel frontend
+  maxAge: 24 * 60 * 60 * 1000 // 1 day
+});
                         res.json("success")
                     }
                     else
@@ -74,16 +79,17 @@ app.post('/', (req,res)=>{
 const verifyUser=(req,res,next)=>{
     const token= req.cookies.token;
     if(!token)
-        {
-            return res.json("This token is not available")
-        }
-        else{
-            jwt.verify(token,`${process.env.JWT_SECRET_KEY}`,(err,decoded)=>{
-                if(err) return res.json("Token is wrong")
-                    req.user = decoded; 
-                    next()
-            })
-        }
+{
+    return res.json("This token is not available")
+}
+else{
+    jwt.verify(token,`${process.env.JWT_SECRET_KEY}`,(err,decoded)=>{
+        if(err) return res.json("Token is wrong")
+        req.user = decoded; 
+        next()
+    })
+}
+
 }
 
 
