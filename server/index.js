@@ -32,6 +32,9 @@ const corsOptions = {
 };
 app.use(cors(corsOptions));
 
+app.get('/', (req, res) => {
+  res.send('API is running...');
+});
 
 
 app.post('/login', (req,res)=>{
