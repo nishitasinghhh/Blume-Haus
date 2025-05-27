@@ -16,8 +16,8 @@ const cloudinary = require("cloudinary").v2;
 require('dotenv').config();
 const allowedOrigin = [
   'https://blume-haus-t3tz.vercel.app',
-  'https://blume-haus-t3tz-git-main-nishita-s-projects.vercel.app/',
-    'https://blume-haus-t3tz-4qm61jf3u-nishita-s-projects.vercel.app/',
+  'https://blume-haus-t3tz-git-main-nishita-s-projects.vercel.app',
+    'https://blume-haus-t3tz-4qm61jf3u-nishita-s-projects.vercel.app',
   'http://localhost:3000'
 ];
 
