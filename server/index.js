@@ -14,10 +14,9 @@ const { v4: uuidv4 } = require('uuid');
 const axios = require('axios'); 
 const cloudinary = require("cloudinary").v2;
 require('dotenv').config();
-const allowedOrigins = [
+const allowedOrigin = [
   'https://blume-haus-t3tz.vercel.app',
   'https://blume-haus-t3tz-git-main-nishita-s-projects.vercel.app',
-    'https://blume-haus-t3tz-qhi40ig9q-nishita-s-projects.vercel.app',
   'http://localhost:3000'
 ];
 
@@ -25,16 +24,10 @@ app.use(express.json());
 app.use(cookieParser());
 
 const corsOptions = {
-  origin: function (origin, callback) {
-    if (!origin || allowedOrigins.includes(origin)) {
-      callback(null, true);
-    } else {
-      callback(new Error("Not allowed by CORS"));
-    }
-  },
+  origin: allowedOrigin,
+  methods: ["GET","POST","PUT","DELETE","OPTIONS"],
   credentials: true,
-  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-  allowedHeaders: ["Content-Type", "Authorization"],
+  allowedHeaders: ["Content-Type","Authorization"],
 };
 app.use(cors(corsOptions));
 
