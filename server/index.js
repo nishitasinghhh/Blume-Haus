@@ -30,7 +30,7 @@ const corsOptions = {
   allowedHeaders: ["Content-Type","Authorization"],
 };
 app.use(cors(corsOptions));
-app.options('*', cors(corsOptions));
+
 app.get('/', (req, res) => {
   res.send('API is running...');
 });
@@ -52,7 +52,7 @@ app.post('/login', (req,res)=>{
   httpOnly: true,
   secure: true,
   sameSite: "none",
-   domain: '.vercel.app',
+
   maxAge: 24 * 60 * 60 * 1000
 });
 
