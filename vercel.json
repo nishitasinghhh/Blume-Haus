@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "routes": [
+    {
+      "src": "/.*",
+      "methods": ["OPTIONS"], // Special handling for preflight
+      "headers": {
+        "Access-Control-Allow-Origin": "https://blume-haus-t3tz.vercel.app",
+        "Access-Control-Allow-Methods": "GET,POST,PUT,DELETE,OPTIONS",
+        "Access-Control-Allow-Headers": "Content-Type,Authorization",
+        "Access-Control-Allow-Credentials": "true"
+      }
+    }
+  ]
+}
