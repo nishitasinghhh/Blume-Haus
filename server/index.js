@@ -55,12 +55,13 @@ app.post('/login', (req,res)=>{
                 if(response)
                     {
                         const token= jwt.sign({email: user.email},process.env.JWT_SECRET_KEY, {expiresIn: "1d"})
-                        res.cookie("token", token, {
+                       res.cookie("token", token, {
   httpOnly: true,
-  secure: true, // set to true if using HTTPS
-  sameSite: "None", // required for cross-site requests like Vercel frontend
-  maxAge: 24 * 60 * 60 * 1000 // 1 day
+  secure: true,
+  sameSite: "None",
+  maxAge: 24 * 60 * 60 * 1000
 });
+
                         res.json("success")
                     }
                     else
