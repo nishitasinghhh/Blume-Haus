@@ -14,7 +14,7 @@ const { v4: uuidv4 } = require('uuid');
 const axios = require('axios'); 
 const cloudinary = require("cloudinary").v2;
 require('dotenv').config();
-const allowedOrigin = [
+const allowedOrigins = [
   'https://blume-haus-t3tz.vercel.app',
   'https://blume-haus-t3tz-git-main-nishita-s-projects.vercel.app',
     'https://blume-haus-t3tz-qhi40ig9q-nishita-s-projects.vercel.app',
