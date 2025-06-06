@@ -25,13 +25,19 @@ app.use(express.json());
 app.use(cookieParser());
 
 const corsOptions = {
-  origin: allowedOrigin,
-  methods: ["GET","POST","PUT","DELETE","OPTIONS"],
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
   credentials: true,
-  allowedHeaders: ["Content-Type","Authorization"],
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"],
 };
-
 app.use(cors(corsOptions));
+
 app.get('/', (req, res) => {
   res.send('API is running...');
 });
