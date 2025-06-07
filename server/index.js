@@ -17,6 +17,7 @@ require('dotenv').config();
 const allowedOrigin = [
   'https://blume-haus-t3tz.vercel.app',
   'https://blume-haus-t3tz-git-main-nishita-s-projects.vercel.app',
+  'https://blume-haus-t3tz-4hpprf1lz-nishita-s-projects.vercel.app',
   'http://localhost:3000'
 ];
 
