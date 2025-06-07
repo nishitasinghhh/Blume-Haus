@@ -229,6 +229,4 @@ mongoose.connect(`${process.env.MONGO_URL}`)
 
 
 
-app.listen(process.env.PORT, ()=>{
-    console.log(`server is running at port 3001`)
-})
+module.exports = app;
